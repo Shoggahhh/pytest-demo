@@ -8,6 +8,7 @@ def test_get_pet(client_httpx: httpx.Client) -> None:
     response = client_httpx.get("/pet/1", timeout=5)
     assert response.status_code == 200
 
+
 @pytest.mark.parametrize(
     "url_path",
     [
